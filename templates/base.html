@@ -28,7 +28,7 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
               <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right navbar-social">
               <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -49,9 +49,8 @@
       <div class="container">
         <div class="hero-banner">
           <div class="hero-banner__content">
-            <h3>Tours &amp; Travels</h3>
-            <h1>Amazing Places on earth</h1>
-            <h4>December 12, 2018</h4>
+            {% block baner_content %}
+            {% endblock baner_content %}
           </div>
         </div>
       </div>
@@ -64,7 +63,11 @@
     <!--================ Blog slider end =================-->
 
     <!--================ Start Blog Post Area =================-->
-    <section class="blog-post-area section-margin mt-4">
+    {% block contact %}
+		{% endblock contact %}
+		
+		{% block all_post_area %}
+		<section class="blog-post-area section-margin mt-4">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
@@ -73,6 +76,7 @@
           </div>
 
           <!-- Start Blog Post Siddebar -->
+					<!-- {% block post_sidebar %} -->
           <div class="col-lg-4 sidebar-widgets">
             <div class="widget-wrap">
               <div class="single-sidebar-widget newsletter-widget">
@@ -92,10 +96,12 @@
               </div>
             </div>
           </div>
+					<!-- {% endblock post_sidebar %} -->
           <!-- End Blog Post Siddebar -->
         </div>
       </div>
     </section>
+		{% endblock all_post_area %}
     <!--================ End Blog Post Area =================-->
   </main>
 
