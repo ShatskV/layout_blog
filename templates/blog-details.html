@@ -20,9 +20,9 @@
   {% block post_content %}
   <div class="main_blog_details">
     {% if post.image_url %}
-      <img class="img-fluid" src="{{ post.image_url }}" alt="">
+      <img class="img-fluid" src="{{ post.image_url }}" alt="image of this post">
     {% else %}
-      <img class="img-fluid" src="{{ STATIC_PREFIX }}img/banner/blog.png" alt="">
+      <img class="img-fluid" src="{{ STATIC_PREFIX }}img/banner/blog.png" alt="image of this post">
     {% endif %}
 
     <h4>{{ post.title }}</h4>
