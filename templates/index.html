@@ -1,20 +1,20 @@
-  {% extends 'base.html' %}
+{% extends 'base.html' %}
 
-  {% block title %}
+{% block title %}
   <title>Sensive Blog - Home</title>
-  {% endblock title %}
+{% endblock title %}
 
-    <!--================Hero Banner start =================-->  
-  {% block baner_content %}
+  <!--================Hero Banner start =================-->  
+{% block baner_content %}
   <h3>Tours &amp; Travels</h3>
   <h1>Amazing Places on earth</h1>
   <h4>December 12, 2018</h4>
-  {% endblock baner_content %}
-    <!--================Hero Banner end =================-->  
-    
+{% endblock baner_content %}
+  <!--================Hero Banner end =================-->  
+  
 
-    <!--================ Blog slider start =================-->
-  {% block slider_content %}
+  <!--================ Blog slider start =================-->
+{% block slider_content %}
   <section>
     <div class="container">
       <div class="d-flex">
@@ -40,11 +40,11 @@
       </div>
     </div>
   </section>
-  {% endblock slider_content %}
-    <!--================ Blog slider end =================-->
+{% endblock slider_content %}
+  <!--================ Blog slider end =================-->
 
-    <!--================ Start Blog Post Area =================-->
-  {% block post_content %}
+  <!--================ Start Blog Post Area =================-->
+{% block post_content %}
   {% for post in fresh_posts %}
     <div class="single-recent-blog-post">
       <div class="thumb">
@@ -91,4 +91,4 @@
         </nav>
     </div>
   </div>
-  {% endblock post_content %}
+{% endblock post_content %}

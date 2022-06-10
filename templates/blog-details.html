@@ -1,23 +1,23 @@
-  {% extends 'base.html' %}
-  
-  {% block title %}
-    <title>{{ post.title }}</title>
-  {% endblock title %}
+{% extends 'base.html' %}
 
-    <!--================Hero Banner start =================-->  
-  {% block baner_content %}
+{% block title %}
+  <title>{{ post.title }}</title>
+{% endblock title %}
+
+  <!--================Hero Banner start =================-->  
+{% block baner_content %}
   <h1>Blog details</h1>
   <nav aria-label="breadcrumb" class="banner-breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
     </ol>
   </nav>
-  {% endblock baner_content %}
-    <!--================Hero Banner end =================-->  
+{% endblock baner_content %}
+  <!--================Hero Banner end =================-->  
 
-  <!--================ Start Blog Post Area =================-->
-  {% block post_content %}
+<!--================ Start Blog Post Area =================-->
+{% block post_content %}
   <div class="main_blog_details">
     {% if post.image_url %}
       <img class="img-fluid" src="{{ post.image_url }}" alt="image of this post">
@@ -70,7 +70,7 @@
         </div>	
       {% endfor %}
   </div>
-  {% endblock post_content %}
- 
-  <!--================ End Blog Post Area =================-->
-        
+{% endblock post_content %}
+
+<!--================ End Blog Post Area =================-->
+      
